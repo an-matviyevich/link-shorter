@@ -5,6 +5,11 @@ import org.example.urlshortener.domain.Provider;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Class for shortening URLs using incrementing integer
+ *
+ * @author Andrei Matviyevich
+ */
 public class IncrementalUrlShortener {
     private Map<String, Integer> dictionary;
     private ProviderRegistry providerRegistry;
@@ -19,6 +24,12 @@ public class IncrementalUrlShortener {
         this.providerRegistry = providerRegistry;
     }
 
+    /**
+     * Shorten provided URL using incrementing integer based on Provider URI
+     *
+     * @param sourceUrl - source URL
+     * @return shortened string
+     */
     public String shorten(String sourceUrl) {
         Provider provider = providerRegistry.getRandomProvider();
         int increment = getIncrement(provider.getUri());

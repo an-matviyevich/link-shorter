@@ -1,20 +1,25 @@
 package org.example.urlshortener.service;
 
+/**
+ * Class for validating SEO keywords
+ *
+ * @author Andrei Matviyevich
+ */
 public class KeywordValidationService {
 
-    public boolean keywordIsNotNull(String keyword) {
+    public boolean keywordIsNull(String keyword) {
         return keyword != null;
     }
 
-    public boolean keywordIsNotEmpty(String keyword) {
+    public boolean keywordIsEmpty(String keyword) {
         return !keyword.trim().isEmpty();
     }
 
-    public boolean keywordNotExceedLengthOfTwenty(String keyword) {
+    public boolean keywordExceedLengthOfTwenty(String keyword) {
         return keyword.length() <= 20;
     }
 
-    public boolean keywordDoesntContainSlash(String keyword) {
+    public boolean keywordContainSlash(String keyword) {
         return !keyword.contains("/");
     }
 }

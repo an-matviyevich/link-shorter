@@ -6,6 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Class for registering different providers, that can be used for shortening URLs
+ * using incrementing integer
+ *
+ * @author Andrei Matviyevich
+ */
 public class ProviderRegistry {
     private List<Provider> registry;
 
